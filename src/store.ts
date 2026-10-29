@@ -141,6 +141,9 @@ export class MemoryStore {
       record.id, record.runId, record.sessionId, record.workspace, record.query, record.candidateCount,
       JSON.stringify(record.selected), JSON.stringify(record.omitted), record.createdAt
     );
+    this.db.prepare(`DELETE FROM recall_log WHERE workspace=? AND id NOT IN (
+      SELECT id FROM recall_log WHERE workspace=? ORDER BY created_at DESC LIMIT 1000
+    )`).run(record.workspace, record.workspace);
     return record;
   }
 
