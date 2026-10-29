@@ -1,0 +1,29 @@
+{
+  "name": "nexcore-memory",
+  "version": "0.1.0",
+  "description": "Auditable long-term memory for engineering agents: FTS candidates, graph expansion, hybrid scoring, MMR and soft forgetting.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test --test-force-exit test/*.test.ts",
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": ["ai-agent", "memory", "graph", "rag", "sqlite", "fts5", "mmr"],
+  "license": "MIT",
+  "engines": {"node": ">=22.13.0"},
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "typescript": "5.9.3"
+  }
+}
