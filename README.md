@@ -9,7 +9,7 @@
 [![SQLite FTS5](https://img.shields.io/badge/SQLite-FTS5-003b57.svg)](https://sqlite.org/fts5.html)
 [![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-2563eb.svg)](package.json)
 
-![NexcoreWork memory architecture](docs/memory-architecture.png)
+![NexcoreWork memory architecture](https://raw.githubusercontent.com/yan-stone-computer/NexcoreMemory/main/docs/memory-architecture.png)
 
 NexcoreMemory 是 [NexcoreWork](https://github.com/yan-stone-computer/nexcorework-site)
 的可审计长期记忆核心，不是 EchoMora 的 Python 服务，也不是一个“无限上下文”演示。
